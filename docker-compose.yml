@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  monopoly-controller:
+    image: htetlinmaung/monopoly-controller
+    ports:
+      - "3000:3000"
+    environment:
+      - KAFKA_BROKERS=localhost:9092
+      - JWT_SECRET={secret}
